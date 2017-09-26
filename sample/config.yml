@@ -1,0 +1,29 @@
+DEBUG: True
+
+NUM_WORKERS: 4
+
+patterns:
+    -   "Name %{GREEDYDATA:name}"
+    -   "Mobile phone %{GREEDYDATA:mobile_phone}"
+    -   "Address %{GREEDYDATA:address}"
+    -   "E-mail %{GREEDYDATA:email}"
+      
+      
+sequence:
+    titles:
+        - 'name'
+        - 'mobile_phone'
+        - 'address'
+        - 'email'
+        - 'link'
+    name:
+        origin: 'name'
+    mobile_phone:
+        origin: 'mobile_phone'
+    address:
+        origin: 'address'
+    email:
+        origin: 'email'
+        save: True
+    link:
+        origin: 'url'
