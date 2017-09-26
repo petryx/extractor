@@ -9,13 +9,15 @@ These instructions will get you a copy of the project and running on your local 
 
 ### Installing
 
-A step by step instruction to installing your environment at **Ubuntu/Debian**
+A instruction to installing your environment at **Ubuntu/Debian**
 
-#### Dependencies
+Only tested in Ubuntu with python3
+
 
 ```bash
-apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils pstotext tesseract-ocr flac ffmpeg lame libmad0 libsox-fmt-mp3 sox libjpeg-dev swig
-
+sudo apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils pstotext tesseract-ocr flac ffmpeg lame libmad0 libsox-fmt-mp3 sox libjpeg-dev swig libpulse-dev
+```
+```bash
 pip install pyextract
 ```
 
@@ -52,8 +54,8 @@ Main Parameters:
 
 ## Author
 
-* **Marlon Petry** - *Initial work* - [Extractor](https://github.com/petryx/Extractor)
-* **Nhan Petry** - *Inspiration and first user* [Extractor](https://github.com/petryx/Extractor)
+* **Marlon Petry** - *Initial work* - [Extractor](https://github.com/petryx/pyextractor)
+* **Nhan Petry** - *Inspiration and first user* [Extractor](https://github.com/petryx/pyextractor)
 
 ## Acknowledgments
 
