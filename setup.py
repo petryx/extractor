@@ -15,7 +15,7 @@ with open('requirements.txt', 'r') as f:
     except Exception as e:
         ok = False
 
-setup(name='extractor',
+setup(name='pyextractor',
             version='0.1-beta',
             description='Command Line Tool to extract data from files',
             url='https://github.com/petryx/extractor',

@@ -3,27 +3,49 @@ DEBUG: True
 NUM_WORKERS: 4
 
 patterns:
-    -   "Name %{GREEDYDATA:name}"
-    -   "Mobile phone %{GREEDYDATA:mobile_phone}"
-    -   "Address %{GREEDYDATA:address}"
-    -   "E-mail %{GREEDYDATA:email}"
-      
-      
+    -   "Documento para teste: %{WORD:name} %{NUMBER:amostra}"
+    -   "Data: %{DATE_EU:data}"
+    -   "Análise 1: %{NUMBER:analise1}"
+    -   "Análise 2: %{NUMBER:analise2}"
+    -   "Análise 3: %{NUMBER:analise3}"
+    -   "Observações Gerais: Local %{NUMBER:local} ponto %{NUMBER:ponto}"
 sequence:
     titles:
         - 'name'
-        - 'mobile_phone'
-        - 'address'
-        - 'email'
+        - 'amostra'
+        - 'data'
+        - 'analise1'
+        - 'analise2'
+        - 'analise3'
+        - 'bairro'
+        - 'cidade'
+        - 'local'
+        - 'ponto'
         - 'link'
     name:
         origin: 'name'
-    mobile_phone:
-        origin: 'mobile_phone'
-    address:
-        origin: 'address'
-    email:
-        origin: 'email'
+    amostra:
+        origin: 'amostra'
+    data:
+        origin: 'data'
+    analise1:
+        origin: 'analise1'
+    analise2:
+        origin: 'analise2'
+    analise3:
+        origin: 'analise3'
+    bairro:
+        origin: 'filename'
+        pattern_regex: '(.*)-(?P<bairro>.*)-(.*)\.pdf'
+    cidade:
+        origin: 'filename'
+        pattern_regex: '(.*)-(.*)-(?P<cidade>.*)\.pdf'
+    local:
+        origin: 'local'
+    ponto:
+        origin: 'ponto'
         save: True
     link:
         origin: 'url'
+
+            

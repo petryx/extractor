@@ -1,4 +1,4 @@
-# Extractor
+# PyExtractor
 
 Extractor is a command line program to extract data from pdf, images, using OCR,GROK patterns, YAML and multiprocessing. 
 The goal of this application is collect data, extract and organize the results in csv file.
@@ -21,7 +21,7 @@ pip install textract
 
 #### Clone repository
 ```bash
-git clone https://github.com/petryx/extractor.git
+git clone https://github.com/petryx/pyextractor.git
 
 
 ```
