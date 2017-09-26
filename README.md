@@ -1,27 +1,27 @@
-#Extractor
+# Extractor
 
-Extractor is a command line program to extract data from pdf, images, using OCR,GROK patterns, YAML and multiprocessing. The goal of this application is collect data, extract and organize in csv file.
+Extractor is a command line program to extract data from pdf, images, using OCR,GROK patterns, YAML and multiprocessing. 
+The goal of this application is collect data, extract and organize the results in csv file.
 
 ## Getting Start
 
-
-These instructions will get you a copy of the project up and running on your local machine.
+These instructions will get you a copy of the project and running on your local machine.
 
 ### Installing
 
-A step by step instruction to installing your env at **Ubuntu/Debian**
+A step by step instruction to installing your environment at **Ubuntu/Debian**
 
 #### Dependencies
 
-```
+```bash
 apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils pstotext tesseract-ocr flac ffmpeg lame libmad0 libsox-fmt-mp3 sox libjpeg-dev swig
 
 pip install textract
 ```
 
 #### Clone repository
-```
-git clone XXXXXXX
+```bash
+git clone https://github.com/petryx/extractor.git
 
 
 ```
@@ -36,20 +36,20 @@ The application has the follow workflow:
 
 ### Configuration file **config.yml**
 
-This file is very importan to application work is a file where reside all configurations, like: header of csv, order of columns, patterns to extract fom file, ...
+This file is very important to application work is a file where reside all configurations, like: header of csv, order of columns, patterns to extract from file, ...
 The [syntax](http://pyyaml.org/wiki/PyYAMLDocumentation#YAMLsyntax) of this file use the rules o [YAML](https://en.wikipedia.org/wiki/YAML).
 
-Principal Parameters:
+Main Parameters:
 
 **DEBUG**: Enable/Disable Debug output at stdout
 
-|**NUM_WORKERS**: Number of cores to processing
+**NUM_WORKERS**: Number of cores to processing
 
-**patterns**: [Grok Patterns](https://github.com/garyelephant/pygrok/tree/master/pygrok/patterns) used to extract data from text. The order of patterns is very important because reflect the precedence which pattern perform first in order to evaluate the lines of text.
+**patterns**: [Grok Patterns](https://github.com/garyelephant/pygrok/tree/master/pygrok/patterns).
 
-**sequence**: The sequence is used to reference columns of csv related to patterns.
+**sequence**: The sequence is used to reference columns of csv related to patterns, and another configurations.
 
-See example at folder sample.
+**See folder sample for example of use**.
 
 ## Built With
 
@@ -64,7 +64,7 @@ See example at folder sample.
 
 ## Acknowledgments
 
-Please give us your feedback of use, is very important to keep developing this tool.
+Please give us your feedback of use, it is very important to keep developing this tool.
 
 
 ## License
